@@ -6,7 +6,7 @@ const context = canvas.getContext('2d');
 const blockSize = 40;
 
 //play intro
-introSound = new Audio('audio/tetrismf.mp3');
+introSound = new Audio('audio/letsplay1.mp3');
 loopSound = new Audio('audio/tetrisloop.mp3');
 collideSound = new Audio('audio/tetriscollide.mp3')
 rotateSound = new Audio('audio/tetrisrotate.mp3')
@@ -238,7 +238,7 @@ function drawGameOverScreen(){
 function drawMainMenu(){
     context.fillStyle='#303040'
     context.fillRect(0,0, canvas.width, canvas.height)
-    context.fillStyle='white'
+    context.fillStyle='green'
     context.font = '32px Russo One';
     context.textAlign = "center";
     context.fillText("Lets Play..", canvas.width /2, canvas.height /2)
