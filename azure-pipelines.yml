@@ -1,0 +1,23 @@
+trigger:
+  branches:
+    include:
+      - main  # or your working branch name
+
+pool:
+  name: Self_Hosted  # 👈 this matches the agent pool in your screenshot
+
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.10'
+      addToPath: true
+
+  - script: |
+      python -m pip install --upgrade pip
+      pip install pygame
+    displayName: 'Install dependencies'
+
+  - script: |
+      echo "Running the Tetris game..."
+      python main.py
+    displayName: 'Run main.py'
