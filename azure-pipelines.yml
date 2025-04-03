@@ -14,7 +14,8 @@ variables:
   imageRepository: 'tetrisgameapp'
   containerRegistry: 'mylab222.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)'
+  tag: 'latest'  # <-- Always push with the latest tag so the Web App pulls the new image automatically
+
 
 stages:
 - stage: Build
